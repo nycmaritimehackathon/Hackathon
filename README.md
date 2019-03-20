@@ -1,2 +1,2 @@
-# Sonder Web Application
-#### A travel app to network and connect with other travelers!
+# Base boilerplate for NERDS stack
+#### Under construction
