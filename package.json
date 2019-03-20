@@ -1,0 +1,28 @@
+{
+  "name": "sonder-webapp",
+  "version": "1.0.0",
+  "description": "Sonder is a web app for travlers to network and connect",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -w & nodemon ./server/index.js",
+    "start-dev": "npm run build-watch & webpack -w & nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Hu and Stephen Lord",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.4.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
