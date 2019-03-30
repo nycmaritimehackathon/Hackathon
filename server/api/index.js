@@ -1,5 +1,12 @@
 const router = require('express').Router()
-
-// router.use('/users', require('./users'))
-
 module.exports = router
+
+router.use('/vessels', require('./vessels'))
+// router.use('/reports', require('./reports'))
+// router.use('/voyages', require('./voyages'))
+
+router.use((req, res, next) => {
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
+})
