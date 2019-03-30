@@ -27,13 +27,13 @@ app.use((err, req, res, next) => {
   console.error(err.stack)
   res.status(err.status || 500).send(err.message || 'Internal server error')
 })
-// db.sync()
-// .then(()=>{
-//     console.log(yellow('db synced'))
-//     app.listen(port, function () {
-//       console.log(green(`Server is on port: ${port}`));
-//     })
-//   }
-// )
+db.sync()
+.then(()=>{
+    console.log(yellow('db synced'))
+    app.listen(port, function () {
+      console.log(green(`Server is on port: ${port}`));
+    })
+  }
+)
 
 module.exports = app
